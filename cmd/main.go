@@ -1,10 +1,11 @@
 package main
 
 import (
-	"log"
+	"fmt"
 
 	"github.com/yarikTri/darty"
-	"go.uber.org/zap"
+	"github.com/yarikTri/darty/pkg/handler"
+	"go.uber.org/zap" // logger
 )
 
 const port = "8080"
@@ -12,11 +13,13 @@ const port = "8080"
 func main() {
 	logger, err := zap.NewProduction()
 	if err != nil {
-		log.Fatalf("Zap logger can't be defined: %+v", err)
+		fmt.Printf("Zap logger can't be defined: %+v", err)
 	}
 
+	handlers := new(handler.Handler)
+
 	srv := new(darty.Server)
-	if err := srv.Run(port); err != nil {
-		logger.Error("Error occured while launching server")
+	if err := srv.Run(port, handlers.InitRoutes()); err != nil {
+		logger.Error("Error occured while launching server: " + err.Error())
 	}
 }
