@@ -1,7 +1,10 @@
 version: '3'
 
-# docker-compose up
-# docker rm $(docker ps -a -q) && docker volume prune -f
+# To start: 
+# - docker-compose up
+# To finish:
+# - docker stop <container_names query>
+# - docker rm $(docker ps -a -q) && docker volume prune -f
 
 services:
 
@@ -9,13 +12,13 @@ services:
     image: postgres:14.4
     restart: always
     environment:
-      POSTGRES_DB: "darty"
-      POSTGRES_USER: "technotilt"
-      POSTGRES_PASSWORD: "love"
+      POSTGRES_DB: dartydb
+      POSTGRES_USER: technotilt
+      POSTGRES_PASSWORD: love
     ports:
       - 5432:5432
     volumes:
-      - './sql/:/docker-entrypoint-initdb.d'
+      - ./_sql/:/docker-entrypoint-initdb.d
 
   adminer:
     image: adminer

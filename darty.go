@@ -13,3 +13,11 @@ type Event struct {
 	// Location ???    // coordinates (later)
 	// Photo    ???
 }
+
+// UsersEvents implements relationship between
+// User and Event
+type UsersEvents struct {
+	ID      int
+	UserID  int
+	EventID int
+}
