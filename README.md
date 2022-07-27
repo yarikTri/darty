@@ -1,6 +1,6 @@
-# darty
+# Darty
 
-Dart + party = Darty
+Dart + Party = Darty
 
 Social media helping find, create and promote your events, concerts and hangouts nearby or far away
 
