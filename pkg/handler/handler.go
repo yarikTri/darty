@@ -5,12 +5,12 @@ import (
 	"github.com/yarikTri/darty/pkg/service"
 )
 
-// Handler ..
+// Handler is the wrap for service.Service struct
 type Handler struct {
 	services *service.Service
 }
 
-// NewHandler ..
+// NewHandler inits new Handler
 func NewHandler(services *service.Service) *Handler {
 	return &Handler{services: services}
 }
@@ -20,6 +20,7 @@ func NewHandler(services *service.Service) *Handler {
 func (h *Handler) InitRoutes() *gin.Engine {
 	router := gin.New()
 
+	// No handler func yet for
 	// router.GET("/")
 
 	events := router.Group("/events")
@@ -40,6 +41,7 @@ func (h *Handler) InitRoutes() *gin.Engine {
 		// ...
 	}
 
+	// No handler func yet for
 	// user := router.Group("/user")
 	// {
 	// 	user.GET("/:id")

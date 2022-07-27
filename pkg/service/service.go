@@ -1,9 +1,13 @@
 package service
 
-import "github.com/yarikTri/darty/pkg/repository"
+import (
+	"github.com/yarikTri/darty"
+	"github.com/yarikTri/darty/pkg/repository"
+)
 
 // Authorization ..
 type Authorization interface {
+	CreateUser(user darty.User) (int, error)
 }
 
 // Event ..
@@ -18,5 +22,7 @@ type Service struct {
 
 // NewService inits empty Service
 func NewService(repos *repository.Repository) *Service {
-	return &Service{}
+	return &Service{
+		Authorization: NewAuthService(repos.Authorization),
+	}
 }

@@ -1,7 +1,13 @@
 package repository
 
+import (
+	"github.com/jmoiron/sqlx"
+	"github.com/yarikTri/darty"
+)
+
 // Authorization ..
 type Authorization interface {
+	CreateUser(user darty.User) (int, error)
 }
 
 // Event ..
@@ -15,6 +21,6 @@ type Repository struct {
 }
 
 // NewRepository inits empty Repository
-func NewRepository() *Repository {
-	return &Repository{}
+func NewRepository(db *sqlx.DB) *Repository {
+	return &Repository{Authorization: NewAuthPostgres(db)}
 }

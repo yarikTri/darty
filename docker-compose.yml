@@ -3,7 +3,7 @@ version: '3'
 # To start: 
 # - docker-compose up
 # To finish:
-# - docker stop <containers_names query>
+# - docker stop $(docker ps -a -q)
 # - docker rm $(docker ps -a -q) && docker volume prune -f
 
 services:
@@ -14,14 +14,13 @@ services:
     environment:
       POSTGRES_DB: dartydb
       POSTGRES_USER: technotilt
-      POSTGRES_PASSWORD: love
+      POSTGRES_PASSWORD: love # How to hide properly?
     ports:
       - 5432:5432
     volumes:
       - ./_sql/:/docker-entrypoint-initdb.d
-
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 8080:8080
+  # adminer:
+  #   image: adminer
+  #   restart: always
+  #   ports:
+  #     - 8080:8080
