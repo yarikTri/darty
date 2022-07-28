@@ -11,7 +11,7 @@ body{
 }
 .AuthForm h1 {
     margin: 0; 
-    background-color: #FF1493; 
+    background-color: #C71585; 
     border-radius: 10px 10px 0 0; 
     color: #FFFF; 
     font-size: 18px; 
@@ -41,6 +41,16 @@ body{
     float: right; 
     font-weight: bold; 
     margin: 10px 20px; 
+    padding: 12px 20px; 
+    text-transform: uppercase;
+}
+.btn2{
+    background: #C71585; 
+    border-radius: 5px; 
+    color: #fff; 
+    float: right; 
+    font-weight: bold; 
+    margin: 10px -10px; 
     padding: 12px 20px; 
     text-transform: uppercase;
 }
