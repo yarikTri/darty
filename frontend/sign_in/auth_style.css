@@ -1,0 +1,64 @@
+body{
+    background: #eee; 
+}
+.AuthForm{
+    width:350px; 
+    height: 250px; 
+    background: #FFFF; 
+    border-radius: 10px; 
+    margin: 10% auto; 
+    box-shadow: 2px 2px 4px 0px #000000; 
+}
+.AuthForm h1 {
+    margin: 0; 
+    background-color: #C71585; 
+    border-radius: 10px 10px 0 0; 
+    color: #FFFF; 
+    font-size: 18px; 
+    padding: 20px; 
+    text-align: center; 
+    text-transform: uppercase; 
+}
+.inp{
+    padding:20px;
+}
+.log{
+    border: 1px solid #dcdcdc; 
+    padding: 12px 10px; 
+    width: 290px; 
+    border-radius: 5px 5px 0 0; 
+}
+.pass{
+    border: 1px solid #dcdcdc; 
+    padding: 12px 10px; 
+    width: 290px; 
+    border-radius: 0px 0px 5px 5px; 
+}
+.btn{
+    background: #C71585; 
+    border-radius: 3px; 
+    color: #fff; 
+    float: right; 
+    font-weight: bold; 
+    margin: 18px 0px; 
+    padding: 12px 20px; 
+    text-transform: uppercase;
+    transition: 0.55s;
+}
+.btn:hover{
+    background: #FFB6C1; 
+}
+.btn2{
+    background: #C71585; 
+    border-radius: 3px; 
+    color: #fff; 
+    float: right; 
+    font-weight: bold; 
+    margin: 18px 10px; 
+    padding: 12px 20px; 
+    text-transform: uppercase;
+    transition: 0.55s;
+}
+.btn2:hover{
+    background: #FFB6C1; 
+}
