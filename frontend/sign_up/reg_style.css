@@ -54,3 +54,16 @@ body{
 .reg_btn:hover{
     background: #FFB6C1; 
 }
+.back_btn{
+    background: #C71585; 
+    border-radius: 3px; 
+    color: #fff; 
+    float: right; 
+    font-weight: bold; 
+    margin: -400px 760px; 
+    padding: 12px 20px; 
+    text-transform: uppercase; 
+}
+.back_btn:hover{
+    background: #FFB6C1; 
+}
