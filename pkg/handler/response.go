@@ -5,7 +5,7 @@ import (
 	"go.uber.org/zap"
 )
 
-// Error ..
+// Error is the custom error type for gin-response
 type Error struct {
 	Message string
 }

@@ -15,7 +15,7 @@ func NewHandler(services *service.Service) *Handler {
 	return &Handler{services: services}
 }
 
-// InitRoutes ..
+// InitRoutes provides creating routes
 // In the development process, the amount of routes will increase
 func (h *Handler) InitRoutes() *gin.Engine {
 	router := gin.New()
