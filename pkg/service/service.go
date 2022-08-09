@@ -8,6 +8,7 @@ import (
 // Authorization ..
 type Authorization interface {
 	CreateUser(user darty.User) (int, error)
+	GenerateToken(username, password string) (string, error)
 }
 
 // Event ..
